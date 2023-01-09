@@ -41,7 +41,7 @@
   class UserSettings extends User {
 
     constructor(
-      public workDirectory: string,
+      public workingDirectory: string,
       public lastOpenFolder: string,
       email: string,
       role: string,

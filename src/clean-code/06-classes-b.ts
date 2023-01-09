@@ -47,7 +47,7 @@
   }
 
   interface UserSettingsProps {
-    workDirectory: string;
+    workingDirectory: string;
     lastOpenFolder: string;
     email: string;
     role: string;
@@ -57,11 +57,11 @@
   }
 
   class UserSettings extends User {
-    public workDirectory: string;
+    public workingDirectory: string;
     public lastOpenFolder: string;
 
     constructor({
-      workDirectory,
+      workingDirectory,
       lastOpenFolder,
       email,
       role,
@@ -70,13 +70,13 @@
       birthdate
     }: UserSettingsProps) {
       super({ email, role, name, gender, birthdate });
-      this.workDirectory = workDirectory;
+      this.workingDirectory = workingDirectory;
       this.lastOpenFolder = lastOpenFolder;
     }
   }
 
   let userSettings = new UserSettings({
-    workDirectory: '/usr/giovanni',
+    workingDirectory: '/usr/giovanni',
     lastOpenFolder: '/downloads',
     email: 'giovanni@gmail.com',
     role: 'root',
