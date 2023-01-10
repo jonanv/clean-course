@@ -37,24 +37,23 @@
 
   //? Idea para la nueva clase InputElement
   class InputElement {
-    public htmlElement: HtmlElement;
-    public inputAttributes: InputAttributes;
-    public inputEvents: InputEvents;
+    public html: HtmlElement;
+    public attributes: InputAttributes;
+    public events: InputEvents;
 
-    constructor(id: string, type: HtmlType, value: string, placeholder: string) {
-      this.htmlElement = new HtmlElement(id, type);
-      this.inputAttributes = new InputAttributes(value, placeholder);
-      this.inputEvents = new InputEvents();
+    constructor(id: string, value: string, placeholder: string) {
+      this.html = new HtmlElement(id, 'input');
+      this.attributes = new InputAttributes(value, placeholder);
+      this.events = new InputEvents();
     }
   }
 
   const nameField = new InputElement(
     'Fernando', 
-    'input', 
     'Enter first name', 
     'txtName'
   );
 
-  console.log({ nameField, events: nameField.inputEvents.setFocus() });
+  console.log({ nameField, events: nameField.events.setFocus() });
 
 })()
