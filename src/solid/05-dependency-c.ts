@@ -27,10 +27,11 @@ export class LocalDataBaseService implements PostProvider {
 
 }
 
-export class JsonDataBaseService {
+export class JsonDataBaseService implements PostProvider {
 
   async getPosts() {
     return localDataBase;
   }
+  
 }
 
