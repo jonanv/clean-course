@@ -35,3 +35,12 @@ export class JsonDataBaseService implements PostProvider {
   
 }
 
+export class WebApiPostService implements PostProvider {
+
+  async getPosts() {
+    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const response = await fetch(url);
+    const data = response.json();
+    return data;
+  }
+}
